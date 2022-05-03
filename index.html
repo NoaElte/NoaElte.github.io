@@ -1,1 +1,77 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/beadando.css" title="normal">
+        <link rel="alternate stylesheet" type="text/css" media="screen" href="css/forVisuallyImpared.css" title="forVisuallyImpared">
+        <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+        <script src="scripts/styleswitcher.js"></script>
+
+        <title>Main Page - Portland Trail Blazers</title>
+    </head>
+    <body>
+        <header>
+            <nav id="jumpToContent">
+                <h2 class="hidden">Skip inside the page</h2>
+                <a href="#visuallyImpared">Skip to change the stylesheet for visually impared</a>
+                <a href="#content">Skip to main content</a>
+            </nav>
+            <ol class="tabs">
+                <li><button class="selected">Main Page</button></li>
+                <li><button onclick="window.location.href='np.html';">Noteable Players</button></li>
+                <li><button onclick="window.location.href='hc.html';">Home Court</button></li>
+                <li><button onclick="window.location.href='nl.html';">Newsletter</button></li>
+            </ol>
+        </header>
+        <main id="content">
+            <article>
+                <h1>Portland Trail Blazers</h1>
+                <figure class="leftSideImage">
+                    <a href="images/p1IMG01.png" target="_blank">
+                        <img src="images/p1IMG01TN.png" alt="Logo of the Portland Trail Blazers" title="Logo of the Portland Trail Blazers">
+                    </a>
+                    <figcaption>Logo of the<br>Portland Trail Blazers</figcaption>
+                </figure>
+                <p>
+                    The <em>Portland Trail Blazer</em> is a professional basketball team based in <strong>Portland, Oregon, USA</strong>.
+                    The team competes in the <strong>NBA</strong> (National Basketball Association) since 1970, when they entered as an expansion team.
+                </p>
+                <figure class="rightSideImage">
+                    <a href="images/p1IMG02.jpg" target="_blank">
+                        <img src="images/p1IMG02TN.jpg" alt="Team members in game" title="Team members in game">
+                    </a>
+                    <figcaption>Team members in game</figcaption>
+                </figure>
+                <p>
+                    The team plays its home games in the <strong>Moda Center</strong>.
+                    The team is currently owned by <em>Jody Allen</em> and coached by <a href="https://hu.wikipedia.org/wiki/Chauncey_Billups" target="_blank">Chauncey Billups</a>.
+                </p>
+            </article>
+        </main>
+        <footer>
+            <section>
+                <h4>Made by:</h4>
+                Nagy Olivér<br>
+                T6WVH6<br>
+                Eötvös Loránd University Faculty of Informatics<br>
+            </section>
+            <aside>
+                <details>
+                    <summary>Sources:</summary>
+                    <a href="https://en.wikipedia.org/wiki/Portland_Trail_Blazers" target="_blank">Logo of the Portland Trail Blazers</a><br>
+                    <a href="https://www.oregonlive.com/blazers/2021/06/portland-trail-blazers-at-denver-nuggets-game-5-preview-time-tv-channel-how-to-watch-free-live-stream-online.html" target="_blank">Team members in game</a><br>
+                    <a href="https://www.nbcsports.com/northwest/trail-blazers/trail-blazers-answer-questions-about-unusual-season-ahead-will-fans-be" target="_blank">Inside of the Moda Center</a><br>
+                    <a href="https://rosequarter.com/about-us/venues/moda-center/" target="_blank">Outside of the Moda Center</a><br>
+                    <a href="https://fadeawayworld.net/nba/the-portland-trail-blazers-potential-starting-lineup-a-first-round-exit-could-be-damian-lillards-exit" target="_blank">Players of the Blazers</a><br>
+                    <a href="https://www.youtube.com/watch?v=a-M3x-eZpV8" target="_blank">Video</a><br>                
+                </details>
+            </aside>
+            <nav id="visuallyImpared">
+                <a id="forVisuallyImpared" href="#visuallyImpared" onclick="setActiveStyleSheet('forVisuallyImpared'); return false;">Stylesheet for visually impared</a>
+                <a id="normal" href="#visuallyImpared" onclick="setActiveStyleSheet('normal'); return false;">Normal stylesheet</a>
+            </nav>
+        </footer>
+    </body>
+</html>
