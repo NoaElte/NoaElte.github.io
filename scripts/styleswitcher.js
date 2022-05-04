@@ -1,4 +1,5 @@
-function setActiveStyleSheet(title) {
+function setActiveStyleSheet(title) 
+{
   var i, a, main;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
     if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
@@ -8,7 +9,8 @@ function setActiveStyleSheet(title) {
   }
 }
 
-function getActiveStyleSheet() {
+function getActiveStyleSheet() 
+{
   var i, a;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
     if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") && !a.disabled) return a.getAttribute("title");
@@ -16,7 +18,8 @@ function getActiveStyleSheet() {
   return null;
 }
 
-function getPreferredStyleSheet() {
+function getPreferredStyleSheet() 
+{
   var i, a;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
     if(a.getAttribute("rel").indexOf("style") != -1
@@ -27,7 +30,8 @@ function getPreferredStyleSheet() {
   return null;
 }
 
-function createCookie(name,value,days) {
+function createCookie(name,value,days) 
+{
   if (days) {
     var date = new Date();
     date.setTime(date.getTime()+(days*24*60*60*1000));
@@ -37,7 +41,8 @@ function createCookie(name,value,days) {
   document.cookie = name+"="+value+expires+"; path=/";
 }
 
-function readCookie(name) {
+function readCookie(name) 
+{
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
   for(var i=0;i < ca.length;i++) {
@@ -48,13 +53,15 @@ function readCookie(name) {
   return null;
 }
 
-window.onload = function(e) {
+window.onload = function(e) 
+{
   var cookie = readCookie("style");
   var title = cookie ? cookie : getPreferredStyleSheet();
   setActiveStyleSheet(title);
 }
 
-window.onunload = function(e) {
+window.onunload = function(e) 
+{
   var title = getActiveStyleSheet();
   createCookie("style", title, 365);
 }
@@ -65,7 +72,8 @@ setActiveStyleSheet(title);
 
 
 // based on: https://www.w3schools.com/howto/howto_js_sort_table.asp
-function sortTable(n) {
+function sortTable(n) 
+{
   var rows, i, x, y, shouldSwitch;
 
   switchCount = 0;
@@ -73,36 +81,46 @@ function sortTable(n) {
   isSwitching = true;
   isAscending = true;
   
-  while (isSwitching) {
+  while (isSwitching) 
+  {
     isSwitching = false;
     rows = document.getElementById("players").rows;
 
-    for (i = 1; i < (rows.length - 1); i++) {
+    for (i = 1; i < (rows.length - 1); i++) 
+    {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
 
-      if (isAscending) {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+      if (isAscending) 
+      {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+        {
           shouldSwitch = true;
           break;
         }
-      } else {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+      } 
+      else 
+      {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+        {
           shouldSwitch = true;
           break;
         }
       }
     }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-
+    if (shouldSwitch) 
+    {
       isSwitching = true;
       switchCount++;
-    } else {
-      if (switchCount == 0 && isAscending) {
-        isAscending = false;
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+    } 
+    else 
+    {
+      if (switchCount == 0 && isAscending) 
+      {
         isSwitching = true;
+        isAscending = false;
       }
     }
   }
