@@ -1,0 +1,50 @@
+header, footer, video{
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: min(4.5vmin, 45px) ;
+}
+h2 {
+    text-align: center;
+    font-size: min(4vmin, 40px) ;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    margin: 3cm;
+    background-color: white;
+    font-size: 12pt;
+}
+
+img {
+    vertical-align: top;
+    max-width: 45vmin;
+}
+figure{
+    margin: 0;
+    max-width: 45vmin;
+    margin-left: 11.25vmin;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+figcaption{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 2vmin ;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:after{
+    content: " (" attr(href) ")";
+}
+figure a:after{
+    content: "";
+}

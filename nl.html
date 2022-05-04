@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/beadando.css" title="normal">
+        <link rel="alternate stylesheet" type="text/css" media="screen" href="css/forVisuallyImpared.css" title="forVisuallyImpared">
+        <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+        <script src="scripts/styleswitcher.js"></script>
+
+        <title>Newsletter subscription - Portland Trail Blazers</title>
+    </head>
+    <body>
+        <header>
+            <nav id="jumpToContent">
+                <h2 class="hidden">Skip inside the page</h2>
+                <a href="#content">Skip to main content</a>
+            </nav>
+            <ol class="tabs">
+                <li><button onclick="window.location.href='index.html';">Main Page</button></li>
+                <li><button onclick="window.location.href='np.html';">Noteable Players</button></li>
+                <li><button onclick="window.location.href='hc.html';">Home Court</button></li>
+                <li><button class="selected">Newsletter</button></li>
+            </ol>
+        </header>
+        <main id="content">
+            <h1>Newsletter</h1>
+            <h2>subscription</h2>
+            <form action="mailto:nagy.oliver.andras@gmail.com" method="post" enctype="text/plain">
+                <fieldset>
+                    <input type="text" id="email" name="email" maxlength="50" placeholder="email address..." required><br>
+                    <textarea name="info" maxlength="500" placeholder="Some information on since when and why are you a Portland fan..."></textarea><br>
+                </fieldset>
+                <div>
+                    <fieldset class="checks">
+                        <input type="radio" id="r1" name="r" required value="I live in Oregon">
+                        <label for="r1">I live in Oregon</label><br>
+                        <input type="radio" id="r2" name="r" required value="I live somewhere else in the U.S.">
+                        <label for="r2">I live somewhere else in the U.S.</label><br>
+                        <input type="radio" id="r3" name="r" required value="I live somewhere else">
+                        <label for="r3">I live somewhere else</label><br>
+                        <input type="checkbox" id="c" name="c" required value="I agree all statements in Terms of services">
+                        <label for="c">I agree all statements in Terms of services</label>
+                    </fieldset>
+                    <fieldset class="btns">
+                        <input type="reset"><br>
+                        <input type="submit">
+                    </fieldset>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <section>
+                <h4>Made by:</h4>
+                Nagy Olivér<br>
+                T6WVH6<br>
+                Eötvös Loránd University Faculty of Informatics<br>
+            </section>
+            <aside>
+                <details>
+                    <summary>Sources:</summary>
+                    <a href="https://en.wikipedia.org/wiki/Portland_Trail_Blazers" target="_blank">Logo of the Portland Trail Blazers</a><br>
+                    <a href="https://www.oregonlive.com/blazers/2021/06/portland-trail-blazers-at-denver-nuggets-game-5-preview-time-tv-channel-how-to-watch-free-live-stream-online.html" target="_blank">Team members in game</a><br>
+                    <a href="https://www.nbcsports.com/northwest/trail-blazers/trail-blazers-answer-questions-about-unusual-season-ahead-will-fans-be" target="_blank">Inside of the Moda Center</a><br>
+                    <a href="https://rosequarter.com/about-us/venues/moda-center/" target="_blank">Outside of the Moda Center</a><br>
+                    <a href="https://fadeawayworld.net/nba/the-portland-trail-blazers-potential-starting-lineup-a-first-round-exit-could-be-damian-lillards-exit" target="_blank">Players of the Blazers</a><br>
+                    <a href="https://www.youtube.com/watch?v=a-M3x-eZpV8" target="_blank">Video</a><br>                
+                </details>
+            </aside>
+            <nav id="visuallyImpared">
+                <a id="forVisuallyImpared" href="#visuallyImpared" onclick="setActiveStyleSheet('forVisuallyImpared'); return false;">Stylesheet for visually impared</a>
+                <a id="normal" href="#visuallyImpared" onclick="setActiveStyleSheet('normal'); return false;">Normal stylesheet</a>
+            </nav>
+        </footer> 
+    </body>
+</html>

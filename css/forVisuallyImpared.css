@@ -1,0 +1,59 @@
+@import url('beadando.css');
+
+body{
+    font-size: min(6vmin, 60px) ;
+}
+
+p{
+    line-height: min(8vmin, 80px);
+}
+
+nav#jumpToContent a{
+    font-size: 3rem;
+}
+
+h1 {
+    font-size: min(13vmin, 130px) ;
+}
+h2 {
+    font-size: min(9vmin, 90px) ;
+}
+h4{
+    font-size: min(7vmin, 70px) ;
+}
+
+.tabs button{
+    font-size: min(7vmin, 40px) ;
+}
+
+figcaption{
+    font-size: 3vmin ;
+}
+
+details p{
+    font-size: min(3vmin, 60px) ;
+}
+
+input[type=text]{
+    font-size: min(4vmin, 40px) ;
+}
+textarea{
+    font-size: min(4vmin, 40px) ;
+}
+input[type=radio], input[type=checkbox]{
+    font-size: min(6vmin, 60px) ;
+}
+input[type=reset], input[type=submit]{
+    font-size: min(6vmin, 60px) ;
+}
+
+footer aside{
+    font-size: min(4vmin, 40px) ;
+}
+
+a#normal{
+    display: block;
+}
+a#forVisuallyImpared{
+    display: none;
+}
